@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lexzero"
+version = "0.1.0"
+description = "TUI interface for Volatility3 memory forensics"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "textual>=0.50.0",
+    "volatility3>=2.5.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+lexzero = "lexzero.app:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
